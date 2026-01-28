@@ -2,7 +2,7 @@
 
 def test_profile_success(client):
 
-    response = client.get("/profile")
+    response = client.get("/users/profile")
 
     assert response.status_code == 200
 
@@ -15,7 +15,7 @@ def test_profile_success(client):
 
 
 def test_admin_success(client):
-    response = client.get("/admin")
+    response = client.get("/users/admin")
 
     assert response.status_code == 200
     data = response.json()
